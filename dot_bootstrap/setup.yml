@@ -26,7 +26,7 @@
           - luarocks
         state: present
 
-    - name: Change shell to zsh
+    - name: Change shell to zsh for user jason
       ansible.builtin.user:
         name: jason
         shell: /usr/bin/zsh
@@ -86,3 +86,6 @@
           - com.valvesoftware.Steam
         state: present
         owner: jason
+
+    - name: Change the default shell for user jason to zsh
+      command: chsh -s /bin/zsh jason
