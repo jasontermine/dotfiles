@@ -33,6 +33,8 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/jason/.zs
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+brew install yazi
+
 sudo chsh -s /bin/zsh $USER
 
 echo "Packages have been installed, Homebrew is set up, and default shell has been changed to /bin/zsh."
