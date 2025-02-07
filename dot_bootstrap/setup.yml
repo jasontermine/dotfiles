@@ -1,15 +1,11 @@
 ---
 - name: Machine setup
-  hosts: localhost
+  hosts: root
   become: true
   connection: local
   gather_facts: true
 
   tasks:
-  - name: Get my user
-      ansible.builtin.set_fact:
-        remote_regular_user: jason
-
     - name: Install packages
       ansible.builtin.dnf:
         name:
@@ -32,7 +28,7 @@
 
     - name: Change shell to zsh
       ansible.builtin.user:
-        name: "{{ remote_regular_user }}"
+        name: jason
         shell: /usr/bin/zsh
 
     - name: Add Visual Studio Code Repo
@@ -75,7 +71,7 @@
 
     - name: Add user to docker group
       ansible.builtin.user:
-        name: "{{ remote_regular_user }}"
+        name: jason
         groups: docker
         append: true
 
@@ -89,4 +85,4 @@
           - org.signal.Signal
           - com.valvesoftware.Steam
         state: present
-        owner: "{{ remote_regular_user }}"
+        owner: jason
