@@ -18,6 +18,7 @@ sudo dnf install -y \
   gcc \
   ripgrep \
   zsh \
+  zoxide \
   fzf \
   make \
   bzip2 \
