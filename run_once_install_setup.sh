@@ -29,8 +29,8 @@ sudo dnf install -y \
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo >> /home/jason/.zshrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/jason/.zshrc
+echo >> /home/$USER/.zshrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$USER/.zshrc
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
