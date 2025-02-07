@@ -7,6 +7,5 @@ This automated setup is currently only configured for Fedora machines.
 ## How to run
 
 ```shell
-export GITHUB_USERNAME=jasontermine
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply jasontermine
 ```
