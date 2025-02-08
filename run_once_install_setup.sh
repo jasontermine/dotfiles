@@ -18,6 +18,8 @@ sudo dnf install -y \
   gcc \
   ripgrep \
   zsh \
+  tldr \
+  fastfetch \
   wget \
   zoxide \
   fzf \
