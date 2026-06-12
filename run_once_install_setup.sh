@@ -6,7 +6,7 @@ echo "installonly_limit=3" | sudo tee -a /etc/dnf/dnf.conf
 echo "clean_requirements_on_remove=True" | sudo tee -a /etc/dnf/dnf.conf
 echo "best=False" | sudo tee -a /etc/dnf/dnf.conf
 echo "skip_if_unavailable=True" | sudo tee -a /etc/dnf/dnf.conf
-echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf
+echo "max_parallel_downloads=15" | sudo tee -a /etc/dnf/dnf.conf
 
 sudo dnf install -y \
   git \
@@ -25,9 +25,7 @@ sudo dnf install -y \
   fzf \
   make \
   bzip2 \
-  bzip2-devel \
-  thunderbird \
-  luarocks
+  bzip2-devel
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
